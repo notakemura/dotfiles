@@ -8,3 +8,6 @@
     cp = cherry-pick
     d = diff
     dc = diff --cached
+    bl = blame
+    bll = blame -L
+    sh = show
