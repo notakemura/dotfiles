@@ -6,3 +6,5 @@
     lg = log --oneline --graph --all
     last = log -1 HEAD
     cp = cherry-pick
+    d = diff
+    dc = diff --cached
