@@ -16,6 +16,7 @@ link_file() {
 
 link_file "$DOTFILES_DIR/.bash_aliases" "$HOME/.bash_aliases"
 link_file "$DOTFILES_DIR/.gitconfig_shared" "$HOME/.gitconfig_shared"
+link_file "$DOTFILES_DIR/.tmux.conf" "$HOME/.tmux.conf"
 
 # .gitconfig に include がなければ追加
 if ! grep -q "gitconfig_shared" "$HOME/.gitconfig" 2>/dev/null; then
