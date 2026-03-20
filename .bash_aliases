@@ -56,9 +56,26 @@ u          元に戻す（undo）
 Ctrl+r     やり直す（redo）
 EOF
             ;;
+        tmux)
+            cat << 'EOF'
+=== tmux: セッション ===
+tmux                       新しいセッション開始
+exit                       ペインを閉じる（最後の1つで終了）
+tmux kill-server           全セッションを一括終了
+
+=== tmux: ペイン分割 ===
+Ctrl+b %                   左右に分割
+Ctrl+b "                   上下に分割
+Ctrl+b 矢印               ペイン移動
+Ctrl+b x                   現在のペインを閉じる
+
+=== tmux: カスタム ===
+Ctrl+b s                   全ペイン同期 ON/OFF
+EOF
+            ;;
         *)
-            echo "Usage: cheat [disk|vim]"
-            echo "Available: disk, vim"
+            echo "Usage: cheat [disk|vim|tmux]"
+            echo "Available: disk, vim, tmux"
             ;;
     esac
 }
